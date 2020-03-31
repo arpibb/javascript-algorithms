@@ -6,9 +6,19 @@ E.g  falsyBouncer([1, 0, null, '', 5]) // should return [1,5]
 */
 
 
-function falsyBouncer(array) {
+function falsyBouncerWithMap(array) {
     let result= []
-    array.map(item => item ? result.push(item) : "")
+    array.map(item => item ? result.push(item) : '')
+    return result
+}
+
+function falsyBouncerWithForLoop(array){
+    let result =[]
+    for (let item of array){
+        if(item){
+            result.push(item)
+        }
+    }
     return result
 }
 
